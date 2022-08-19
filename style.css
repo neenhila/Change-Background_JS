@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+:root {
+    --bg-color: #2501b6;
+    --btn-color: #17a333;
+    --border-color: #201f1fbb;
+    --border-color2: #35aa87;
+}
+
+body {
+    background-color: var(--bg-color);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn {
+    position: relative;
+    border: 4px solid var(--border-color);
+    background-image: linear-gradient(to right bottom, var(--btn-color) 20%, gray 80%);
+    line-height: 48px;
+    font-size: 16px;
+    width: 12rem;
+    color: rgb(31, 30, 30);
+    font-weight: bold;
+    animation: btnBackgroundAnimate .5s linear infinite;
+    margin-top: 40px;
+}
+
+
+@keyframes btnBackgroundAnimate{
+    0% {
+        transform: translateX(10px)
+    }
+    50% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(10px)
+    }
+    
+}
+
+.colorHex{
+    font-size: 48px;
+}
+
+.btn:focus{
+    animation: none;
+}
